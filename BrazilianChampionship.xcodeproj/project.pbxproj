@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		815C4A301BE102A100CBCF8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A2F1BE102A100CBCF8E /* main.m */; };
-		815C4A331BE102A100CBCF8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A321BE102A100CBCF8E /* AppDelegate.m */; };
-		815C4A361BE102A100CBCF8E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A351BE102A100CBCF8E /* ViewController.m */; };
-		815C4A391BE102A100CBCF8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815C4A371BE102A100CBCF8E /* Main.storyboard */; };
-		815C4A3B1BE102A100CBCF8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815C4A3A1BE102A100CBCF8E /* Assets.xcassets */; };
-		815C4A3E1BE102A100CBCF8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815C4A3C1BE102A100CBCF8E /* LaunchScreen.storyboard */; };
 		815C4A491BE102A100CBCF8E /* BrazilianChampionshipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A481BE102A100CBCF8E /* BrazilianChampionshipTests.m */; };
 		815C4A541BE102A100CBCF8E /* BrazilianChampionshipUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A531BE102A100CBCF8E /* BrazilianChampionshipUITests.m */; };
+		815C4A721BE102FE00CBCF8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A631BE102FD00CBCF8E /* AppDelegate.m */; };
+		815C4A731BE102FE00CBCF8E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A661BE102FD00CBCF8E /* ViewController.m */; };
+		815C4A741BE102FE00CBCF8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815C4A691BE102FD00CBCF8E /* Assets.xcassets */; };
+		815C4A751BE102FE00CBCF8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815C4A6A1BE102FD00CBCF8E /* LaunchScreen.storyboard */; };
+		815C4A761BE102FE00CBCF8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815C4A6C1BE102FD00CBCF8E /* Main.storyboard */; };
+		815C4A781BE102FE00CBCF8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A701BE102FD00CBCF8E /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,21 +36,21 @@
 
 /* Begin PBXFileReference section */
 		815C4A2B1BE102A100CBCF8E /* BrazilianChampionship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrazilianChampionship.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		815C4A2F1BE102A100CBCF8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		815C4A311BE102A100CBCF8E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		815C4A321BE102A100CBCF8E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		815C4A341BE102A100CBCF8E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		815C4A351BE102A100CBCF8E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		815C4A381BE102A100CBCF8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		815C4A3A1BE102A100CBCF8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		815C4A3D1BE102A100CBCF8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		815C4A3F1BE102A100CBCF8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815C4A441BE102A100CBCF8E /* BrazilianChampionshipTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrazilianChampionshipTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		815C4A481BE102A100CBCF8E /* BrazilianChampionshipTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrazilianChampionshipTests.m; sourceTree = "<group>"; };
 		815C4A4A1BE102A100CBCF8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815C4A4F1BE102A100CBCF8E /* BrazilianChampionshipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrazilianChampionshipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		815C4A531BE102A100CBCF8E /* BrazilianChampionshipUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BrazilianChampionshipUITests.m; sourceTree = "<group>"; };
 		815C4A551BE102A100CBCF8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		815C4A621BE102FD00CBCF8E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		815C4A631BE102FD00CBCF8E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		815C4A651BE102FD00CBCF8E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		815C4A661BE102FD00CBCF8E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		815C4A691BE102FD00CBCF8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		815C4A6B1BE102FD00CBCF8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		815C4A6D1BE102FD00CBCF8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		815C4A6F1BE102FD00CBCF8E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		815C4A701BE102FD00CBCF8E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,25 +101,14 @@
 		815C4A2D1BE102A100CBCF8E /* BrazilianChampionship */ = {
 			isa = PBXGroup;
 			children = (
-				815C4A311BE102A100CBCF8E /* AppDelegate.h */,
-				815C4A321BE102A100CBCF8E /* AppDelegate.m */,
-				815C4A341BE102A100CBCF8E /* ViewController.h */,
-				815C4A351BE102A100CBCF8E /* ViewController.m */,
-				815C4A371BE102A100CBCF8E /* Main.storyboard */,
-				815C4A3A1BE102A100CBCF8E /* Assets.xcassets */,
-				815C4A3C1BE102A100CBCF8E /* LaunchScreen.storyboard */,
-				815C4A3F1BE102A100CBCF8E /* Info.plist */,
-				815C4A2E1BE102A100CBCF8E /* Supporting Files */,
+				815C4A611BE102FD00CBCF8E /* AppDelegate */,
+				815C4A641BE102FD00CBCF8E /* Controller */,
+				815C4A671BE102FD00CBCF8E /* Model */,
+				815C4A681BE102FD00CBCF8E /* Resources */,
+				815C4A6E1BE102FD00CBCF8E /* Supporting Files */,
+				815C4A711BE102FE00CBCF8E /* View */,
 			);
 			path = BrazilianChampionship;
-			sourceTree = "<group>";
-		};
-		815C4A2E1BE102A100CBCF8E /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				815C4A2F1BE102A100CBCF8E /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		815C4A471BE102A100CBCF8E /* BrazilianChampionshipTests */ = {
@@ -138,6 +127,57 @@
 				815C4A551BE102A100CBCF8E /* Info.plist */,
 			);
 			path = BrazilianChampionshipUITests;
+			sourceTree = "<group>";
+		};
+		815C4A611BE102FD00CBCF8E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				815C4A621BE102FD00CBCF8E /* AppDelegate.h */,
+				815C4A631BE102FD00CBCF8E /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		815C4A641BE102FD00CBCF8E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				815C4A651BE102FD00CBCF8E /* ViewController.h */,
+				815C4A661BE102FD00CBCF8E /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		815C4A671BE102FD00CBCF8E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		815C4A681BE102FD00CBCF8E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				815C4A691BE102FD00CBCF8E /* Assets.xcassets */,
+				815C4A6A1BE102FD00CBCF8E /* LaunchScreen.storyboard */,
+				815C4A6C1BE102FD00CBCF8E /* Main.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		815C4A6E1BE102FD00CBCF8E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				815C4A6F1BE102FD00CBCF8E /* Info.plist */,
+				815C4A701BE102FD00CBCF8E /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		815C4A711BE102FE00CBCF8E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,9 +286,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815C4A3E1BE102A100CBCF8E /* LaunchScreen.storyboard in Resources */,
-				815C4A3B1BE102A100CBCF8E /* Assets.xcassets in Resources */,
-				815C4A391BE102A100CBCF8E /* Main.storyboard in Resources */,
+				815C4A741BE102FE00CBCF8E /* Assets.xcassets in Resources */,
+				815C4A761BE102FE00CBCF8E /* Main.storyboard in Resources */,
+				815C4A751BE102FE00CBCF8E /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,9 +313,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				815C4A361BE102A100CBCF8E /* ViewController.m in Sources */,
-				815C4A331BE102A100CBCF8E /* AppDelegate.m in Sources */,
-				815C4A301BE102A100CBCF8E /* main.m in Sources */,
+				815C4A721BE102FE00CBCF8E /* AppDelegate.m in Sources */,
+				815C4A781BE102FE00CBCF8E /* main.m in Sources */,
+				815C4A731BE102FE00CBCF8E /* ViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,20 +351,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		815C4A371BE102A100CBCF8E /* Main.storyboard */ = {
+		815C4A6A1BE102FD00CBCF8E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				815C4A381BE102A100CBCF8E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		815C4A3C1BE102A100CBCF8E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				815C4A3D1BE102A100CBCF8E /* Base */,
+				815C4A6B1BE102FD00CBCF8E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		815C4A6C1BE102FD00CBCF8E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				815C4A6D1BE102FD00CBCF8E /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -416,7 +456,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = BrazilianChampionship/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BrazilianChampionship/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = squiter.BrazilianChampionship;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -427,7 +467,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = BrazilianChampionship/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/BrazilianChampionship/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = squiter.BrazilianChampionship;
 				PRODUCT_NAME = "$(TARGET_NAME)";
