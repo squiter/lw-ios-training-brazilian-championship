@@ -19,6 +19,8 @@
 		815C4A851BE11FD300CBCF8E /* BCAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A841BE11FD300CBCF8E /* BCAPIClient.m */; };
 		815C4A881BE1212500CBCF8E /* BCTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A871BE1212500CBCF8E /* BCTeam.m */; };
 		81C878531BE1323A00872478 /* BCTeamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C878521BE1323A00872478 /* BCTeamDetailViewController.m */; };
+		81C878561BE1380F00872478 /* BCMatchesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C878551BE1380F00872478 /* BCMatchesTableViewController.m */; };
+		81C878591BE138D400872478 /* BCMatchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C878581BE138D400872478 /* BCMatchTableViewCell.m */; };
 		8CCDAE6AF89F974165387A66 /* libPods-BrazilianChampionship.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 581D5C0BF5AC60324BBDC402 /* libPods-BrazilianChampionship.a */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,10 @@
 		815C4A871BE1212500CBCF8E /* BCTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTeam.m; sourceTree = "<group>"; };
 		81C878511BE1323A00872478 /* BCTeamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTeamDetailViewController.h; sourceTree = "<group>"; };
 		81C878521BE1323A00872478 /* BCTeamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTeamDetailViewController.m; sourceTree = "<group>"; };
+		81C878541BE1380F00872478 /* BCMatchesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMatchesTableViewController.h; sourceTree = "<group>"; };
+		81C878551BE1380F00872478 /* BCMatchesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMatchesTableViewController.m; sourceTree = "<group>"; };
+		81C878571BE138D400872478 /* BCMatchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMatchTableViewCell.h; sourceTree = "<group>"; };
+		81C878581BE138D400872478 /* BCMatchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMatchTableViewCell.m; sourceTree = "<group>"; };
 		B825DA6E03E0996A76508D41 /* Pods-BrazilianChampionship.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrazilianChampionship.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrazilianChampionship/Pods-BrazilianChampionship.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -165,6 +171,8 @@
 				815C4A7A1BE1036100CBCF8E /* TeamsTableViewController.m */,
 				81C878511BE1323A00872478 /* BCTeamDetailViewController.h */,
 				81C878521BE1323A00872478 /* BCTeamDetailViewController.m */,
+				81C878541BE1380F00872478 /* BCMatchesTableViewController.h */,
+				81C878551BE1380F00872478 /* BCMatchesTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +210,8 @@
 			children = (
 				815C4A7C1BE105D300CBCF8E /* BCTeamTableViewCell.h */,
 				815C4A7D1BE105D300CBCF8E /* BCTeamTableViewCell.m */,
+				81C878571BE138D400872478 /* BCMatchTableViewCell.h */,
+				81C878581BE138D400872478 /* BCMatchTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -419,10 +429,12 @@
 			files = (
 				815C4A721BE102FE00CBCF8E /* AppDelegate.m in Sources */,
 				815C4A7B1BE1036100CBCF8E /* TeamsTableViewController.m in Sources */,
+				81C878561BE1380F00872478 /* BCMatchesTableViewController.m in Sources */,
 				815C4A781BE102FE00CBCF8E /* main.m in Sources */,
 				815C4A851BE11FD300CBCF8E /* BCAPIClient.m in Sources */,
 				815C4A7E1BE105D300CBCF8E /* BCTeamTableViewCell.m in Sources */,
 				81C878531BE1323A00872478 /* BCTeamDetailViewController.m in Sources */,
+				81C878591BE138D400872478 /* BCMatchTableViewCell.m in Sources */,
 				815C4A881BE1212500CBCF8E /* BCTeam.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
