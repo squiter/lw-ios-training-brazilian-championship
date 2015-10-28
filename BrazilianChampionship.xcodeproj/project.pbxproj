@@ -16,6 +16,7 @@
 		815C4A781BE102FE00CBCF8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A701BE102FD00CBCF8E /* main.m */; };
 		815C4A7B1BE1036100CBCF8E /* TeamsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A7A1BE1036100CBCF8E /* TeamsTableViewController.m */; };
 		815C4A7E1BE105D300CBCF8E /* BCTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A7D1BE105D300CBCF8E /* BCTeamTableViewCell.m */; };
+		815C4A851BE11FD300CBCF8E /* BCAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A841BE11FD300CBCF8E /* BCAPIClient.m */; };
 		8CCDAE6AF89F974165387A66 /* libPods-BrazilianChampionship.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 581D5C0BF5AC60324BBDC402 /* libPods-BrazilianChampionship.a */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,8 @@
 		815C4A7A1BE1036100CBCF8E /* TeamsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamsTableViewController.m; sourceTree = "<group>"; };
 		815C4A7C1BE105D300CBCF8E /* BCTeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTeamTableViewCell.h; sourceTree = "<group>"; };
 		815C4A7D1BE105D300CBCF8E /* BCTeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTeamTableViewCell.m; sourceTree = "<group>"; };
+		815C4A831BE11FD300CBCF8E /* BCAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCAPIClient.h; sourceTree = "<group>"; };
+		815C4A841BE11FD300CBCF8E /* BCAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAPIClient.m; sourceTree = "<group>"; };
 		B825DA6E03E0996A76508D41 /* Pods-BrazilianChampionship.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrazilianChampionship.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrazilianChampionship/Pods-BrazilianChampionship.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +114,7 @@
 		815C4A2D1BE102A100CBCF8E /* BrazilianChampionship */ = {
 			isa = PBXGroup;
 			children = (
+				815C4A7F1BE11ED500CBCF8E /* Client */,
 				815C4A611BE102FD00CBCF8E /* AppDelegate */,
 				815C4A641BE102FD00CBCF8E /* Controller */,
 				815C4A671BE102FD00CBCF8E /* Model */,
@@ -190,6 +194,15 @@
 				815C4A7D1BE105D300CBCF8E /* BCTeamTableViewCell.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		815C4A7F1BE11ED500CBCF8E /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				815C4A831BE11FD300CBCF8E /* BCAPIClient.h */,
+				815C4A841BE11FD300CBCF8E /* BCAPIClient.m */,
+			);
+			path = Client;
 			sourceTree = "<group>";
 		};
 		BC41D97239B4F3963F346333 /* Pods */ = {
@@ -397,6 +410,7 @@
 				815C4A721BE102FE00CBCF8E /* AppDelegate.m in Sources */,
 				815C4A7B1BE1036100CBCF8E /* TeamsTableViewController.m in Sources */,
 				815C4A781BE102FE00CBCF8E /* main.m in Sources */,
+				815C4A851BE11FD300CBCF8E /* BCAPIClient.m in Sources */,
 				815C4A7E1BE105D300CBCF8E /* BCTeamTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
