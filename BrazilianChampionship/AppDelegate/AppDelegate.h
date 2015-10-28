@@ -1,5 +1,5 @@
 //
-//  TeamsTableViewController.h
+//  AppDelegate.h
 //  BrazilianChampionship
 //
 //  Created by Treinamento Mobile on 10/28/15.
@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BCTeamTableViewCell.h"
 
-@interface TeamsTableViewController : UITableViewController
+@interface AppDelegate : UIResponder <UIApplicationDelegate>
+
+@property (strong, nonatomic) UIWindow *window;
+
 
 @end
+

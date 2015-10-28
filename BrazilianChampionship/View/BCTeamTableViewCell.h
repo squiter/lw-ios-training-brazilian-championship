@@ -10,4 +10,7 @@
 
 @interface BCTeamTableViewCell : UITableViewCell
 
+@property (nonatomic,weak) IBOutlet UIImageView *shield;
+@property (nonatomic,weak) IBOutlet UILabel *name;
+
 @end

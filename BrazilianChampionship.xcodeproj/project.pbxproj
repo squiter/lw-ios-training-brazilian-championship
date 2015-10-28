@@ -10,11 +10,12 @@
 		815C4A491BE102A100CBCF8E /* BrazilianChampionshipTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A481BE102A100CBCF8E /* BrazilianChampionshipTests.m */; };
 		815C4A541BE102A100CBCF8E /* BrazilianChampionshipUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A531BE102A100CBCF8E /* BrazilianChampionshipUITests.m */; };
 		815C4A721BE102FE00CBCF8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A631BE102FD00CBCF8E /* AppDelegate.m */; };
-		815C4A731BE102FE00CBCF8E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A661BE102FD00CBCF8E /* ViewController.m */; };
 		815C4A741BE102FE00CBCF8E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 815C4A691BE102FD00CBCF8E /* Assets.xcassets */; };
 		815C4A751BE102FE00CBCF8E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815C4A6A1BE102FD00CBCF8E /* LaunchScreen.storyboard */; };
 		815C4A761BE102FE00CBCF8E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815C4A6C1BE102FD00CBCF8E /* Main.storyboard */; };
 		815C4A781BE102FE00CBCF8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A701BE102FD00CBCF8E /* main.m */; };
+		815C4A7B1BE1036100CBCF8E /* TeamsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A7A1BE1036100CBCF8E /* TeamsTableViewController.m */; };
+		815C4A7E1BE105D300CBCF8E /* BCTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A7D1BE105D300CBCF8E /* BCTeamTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,13 +45,15 @@
 		815C4A551BE102A100CBCF8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815C4A621BE102FD00CBCF8E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		815C4A631BE102FD00CBCF8E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		815C4A651BE102FD00CBCF8E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		815C4A661BE102FD00CBCF8E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		815C4A691BE102FD00CBCF8E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		815C4A6B1BE102FD00CBCF8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		815C4A6D1BE102FD00CBCF8E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		815C4A6F1BE102FD00CBCF8E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		815C4A701BE102FD00CBCF8E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		815C4A791BE1036100CBCF8E /* TeamsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamsTableViewController.h; sourceTree = "<group>"; };
+		815C4A7A1BE1036100CBCF8E /* TeamsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamsTableViewController.m; sourceTree = "<group>"; };
+		815C4A7C1BE105D300CBCF8E /* BCTeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTeamTableViewCell.h; sourceTree = "<group>"; };
+		815C4A7D1BE105D300CBCF8E /* BCTeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTeamTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +144,8 @@
 		815C4A641BE102FD00CBCF8E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				815C4A651BE102FD00CBCF8E /* ViewController.h */,
-				815C4A661BE102FD00CBCF8E /* ViewController.m */,
+				815C4A791BE1036100CBCF8E /* TeamsTableViewController.h */,
+				815C4A7A1BE1036100CBCF8E /* TeamsTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -176,6 +179,8 @@
 		815C4A711BE102FE00CBCF8E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				815C4A7C1BE105D300CBCF8E /* BCTeamTableViewCell.h */,
+				815C4A7D1BE105D300CBCF8E /* BCTeamTableViewCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +247,7 @@
 		815C4A231BE102A000CBCF8E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BC;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Treinamento Mobile";
 				TargetAttributes = {
@@ -314,8 +320,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				815C4A721BE102FE00CBCF8E /* AppDelegate.m in Sources */,
+				815C4A7B1BE1036100CBCF8E /* TeamsTableViewController.m in Sources */,
 				815C4A781BE102FE00CBCF8E /* main.m in Sources */,
-				815C4A731BE102FE00CBCF8E /* ViewController.m in Sources */,
+				815C4A7E1BE105D300CBCF8E /* BCTeamTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

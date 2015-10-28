@@ -10,6 +10,8 @@
 
 @interface TeamsTableViewController ()
 
+@property (nonatomic, strong) NSArray *teams;
+
 @end
 
 @implementation TeamsTableViewController
@@ -22,6 +24,11 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.title = @"Times";
+    
+    [self loadTeams];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,27 +36,34 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)loadTeams {
+    self.teams = @[
+                   @{@"name": @"corinthians"},
+                   @{@"name": @"palmeiras"}
+                   ];
+}
+
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//#warning Incomplete implementation, return the number of sections
+//    return 0;
+//}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.teams.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    BCTeamTableViewCell *teamCell = [tableView dequeueReusableCellWithIdentifier:@"teamCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    
-    return cell;
+    teamCell.name.text = [self.teams[indexPath.row] objectForKey:@"name"];
+
+    return teamCell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
