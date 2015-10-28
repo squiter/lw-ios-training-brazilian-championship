@@ -18,4 +18,7 @@
              };
 }
 
+- (NSComparisonResult)compare:(BCTeam *)otherObject {
+    return [self.name compare:otherObject.name];
+}
 @end

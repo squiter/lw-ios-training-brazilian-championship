@@ -40,7 +40,7 @@
     [BCAPIClient fetchTeams:^(NSArray<BCTeam *> *teams, NSInteger statusCode, NSError *error) {
         
         if (!error) {
-            self.teams = teams;
+            self.teams = [teams sortedArrayUsingSelector:@selector(compare:)];
         } else {
             NSLog(@"%@",error);
         }
