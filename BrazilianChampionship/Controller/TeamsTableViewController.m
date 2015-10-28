@@ -68,6 +68,7 @@
     // Configure the cell...
     BCTeam *team = self.teams[indexPath.row];
     teamCell.name.text = team.name;
+    [teamCell.shield sd_setImageWithURL:(NSURL *)team.imageURL];
 
     return teamCell;
 }
