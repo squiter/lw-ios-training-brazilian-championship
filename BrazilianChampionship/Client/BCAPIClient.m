@@ -41,4 +41,24 @@
     }];
 }
 
++ (NSURLSessionTask *)fetchMatches:(APIClientMatchesBlockDef)completion {
+    return [[self sharedClient] GET:@"matches"
+                         parameters:nil
+                            success:^(NSURLSessionDataTask * _Nonnull task, id _Nonnull responseObject)
+            {
+                NSArray *matches = [MTLJSONAdapter modelsOfClass:BCMatch.class
+                                                 fromJSONArray:responseObject[@"matches"]
+                                                         error:nil];
+                
+                NSHTTPURLResponse *response = (NSHTTPURLResponse *) task.response;
+                completion(matches, response.statusCode, nil);
+                
+            } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+                
+                NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+                completion(nil, response.statusCode, error);
+                
+            }];
+}
+
 @end

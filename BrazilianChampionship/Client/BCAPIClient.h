@@ -9,11 +9,14 @@
 #import <AFNetworking/AFNetworking.h>
 
 #import "BCTeam.h"
+#import "BCMatch.h"
 
 typedef void(^APIClientTeamsBlockDef)(NSArray <BCTeam *> *teams, NSInteger statusCode, NSError *error);
+typedef void(^APIClientMatchesBlockDef)(NSArray <BCMatch *> *matches, NSInteger statusCode, NSError *error);
 
 @interface BCAPIClient : AFHTTPSessionManager
 
 + (NSURLSessionTask *)fetchTeams:(APIClientTeamsBlockDef)completion;
++ (NSURLSessionTask *)fetchMatches:(APIClientMatchesBlockDef)completion;
 
 @end

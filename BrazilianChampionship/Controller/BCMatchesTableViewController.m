@@ -25,12 +25,29 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    self.title = @"Patidas";
+    
+    [self loadMatches];
     [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loadMatches {
+    [BCAPIClient fetchMatches:^(NSArray<BCMatch *> *matches, NSInteger statusCode, NSError *error) {
+        
+        if (!error) {
+            self.matches = matches;
+        } else {
+            NSLog(@"%@",error);
+        }
+        
+        [self.tableView reloadData];
+        
+    }];
 }
 
 #pragma mark - Table view data source
@@ -43,21 +60,23 @@
 */
  
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return self.matches.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BCMatchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"matchCell" forIndexPath:indexPath];
     
+    BCMatch *match = self.matches[indexPath.row];
+    
     // Configure the cell...
-    cell.mDate.text = @"09/03 13:32";
-    cell.location.text = @"Itaquerão - São Paulo";
-    cell.homeTeamName.text = @"Corinthians";
-    cell.homeTeamScore.text = @"7";
-    [cell.homeTeamSheild sd_setImageWithURL:(NSURL *)@"http://www.ogol.com.br/img/logos/equipas/2248_imgbank.png"];
-    cell.vistitorTeamName.text = @"Palmeiras";
-    cell.visitorTeamScore.text = @"1";
-    [cell.visitorTeamSheild sd_setImageWithURL:(NSURL *)@"http://www.ogol.com.br/img/logos/equipas/2248_imgbank.png"];
+    cell.mDate.text = match.mDate;
+    cell.location.text = match.location;
+    cell.homeTeamName.text = match.homeTeam.name;
+    cell.homeTeamScore.text = match.homeTeamScore.stringValue;
+    [cell.homeTeamSheild sd_setImageWithURL:(NSURL *) match.homeTeam.imageURL];
+    cell.vistitorTeamName.text = match.visitorTeam.name;
+    cell.visitorTeamScore.text = match.visitorTeamScore.stringValue;
+    [cell.visitorTeamSheild sd_setImageWithURL:(NSURL *) match.visitorTeam.imageURL];
     
     return cell;
 }
