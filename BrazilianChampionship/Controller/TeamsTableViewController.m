@@ -37,10 +37,17 @@
 }
 
 - (void)loadTeams {
-    self.teams = @[
-                   @{@"name": @"corinthians"},
-                   @{@"name": @"palmeiras"}
-                   ];
+    [BCAPIClient fetchTeams:^(NSArray<BCTeam *> *teams, NSInteger statusCode, NSError *error) {
+        
+        if (!error) {
+            self.teams = teams;
+        } else {
+            NSLog(@"%@",error);
+        }
+        
+        [self.tableView reloadData];
+        
+    }];
 }
 
 #pragma mark - Table view data source
@@ -59,7 +66,8 @@
     BCTeamTableViewCell *teamCell = [tableView dequeueReusableCellWithIdentifier:@"teamCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    teamCell.name.text = [self.teams[indexPath.row] objectForKey:@"name"];
+    BCTeam *team = self.teams[indexPath.row];
+    teamCell.name.text = team.name;
 
     return teamCell;
 }

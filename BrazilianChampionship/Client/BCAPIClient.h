@@ -8,6 +8,12 @@
 
 #import <AFNetworking/AFNetworking.h>
 
+#import "BCTeam.h"
+
+typedef void(^APIClientTeamsBlockDef)(NSArray <BCTeam *> *teams, NSInteger statusCode, NSError *error);
+
 @interface BCAPIClient : AFHTTPSessionManager
+
++ (NSURLSessionTask *)fetchTeams:(APIClientTeamsBlockDef)completion;
 
 @end

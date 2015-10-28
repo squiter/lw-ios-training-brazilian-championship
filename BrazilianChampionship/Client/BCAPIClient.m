@@ -15,10 +15,30 @@
     static BCAPIClient *instance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSURL *baseURL = [NSURL URLWithString:@"http://mockbrasileiro.herokuapps.com/api"];
+        NSURL *baseURL = [NSURL URLWithString:@"http://mockbrasileirao.herokuapp.com/api"];
         instance = [[BCAPIClient alloc] initWithBaseURL:baseURL];
     });
     return instance;
+}
+
++ (NSURLSessionTask *)fetchTeams:(APIClientTeamsBlockDef)completion {
+    return [[self sharedClient] GET:@"teams"
+                         parameters:nil
+                            success:^(NSURLSessionDataTask * _Nonnull task, id _Nonnull responseObject)
+    {
+        NSArray *teams = [MTLJSONAdapter modelsOfClass:BCTeam.class
+                                         fromJSONArray:responseObject[@"teams"]
+                                                 error:nil];
+                                
+        NSHTTPURLResponse *response = (NSHTTPURLResponse *) task.response;
+        completion(teams, response.statusCode, nil);
+        
+    } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
+                                
+        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+        completion(nil, response.statusCode, error);
+                                
+    }];
 }
 
 @end

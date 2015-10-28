@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BCTeamTableViewCell.h"
+#import "BCAPIClient.h"
 
 @interface TeamsTableViewController : UITableViewController
 
