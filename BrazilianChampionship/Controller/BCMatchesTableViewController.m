@@ -52,22 +52,39 @@
 
 #pragma mark - Table view data source
 
-/*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    NSInteger count = 0;
+    
+    for (NSUInteger i = 0; i < self.matches.count; i++) {
+        if (i == 0) {
+            count++;
+        }else{
+            NSUInteger j = i - 1;
+            BCMatch *current = self.matches[i];
+            BCMatch *previus = self.matches[j];
+            if (current.mRound != previus.mRound) {
+                count++;
+            }
+        }
+    }
+    return count;
 }
-*/
+
+/*
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    // return all elements for this section
+}
+
  
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.matches.count;
 }
-
+*/
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BCMatchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"matchCell" forIndexPath:indexPath];
     
     BCMatch *match = self.matches[indexPath.row];
-        
+    
     // Configure the cell...
     cell.mDate.text = match.formattedDate;
     cell.location.text = match.location;
@@ -77,7 +94,7 @@
     cell.vistitorTeamName.text = match.visitorTeam.name;
     cell.visitorTeamScore.text = match.visitorTeamScore.stringValue;
     [cell.visitorTeamSheild sd_setImageWithURL:(NSURL *) match.visitorTeam.imageURL];
-    
+    //TODO: select the righ cell by indexPath.section
     return cell;
 }
 

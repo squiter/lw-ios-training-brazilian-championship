@@ -16,7 +16,7 @@
 @property (nonatomic, copy) NSNumber *visitorTeamScore;
 @property (nonatomic, copy) NSDate *mDate;
 @property (nonatomic, copy) NSString *location;
-@property (nonatomic, copy) NSNumber *round;
+@property (nonatomic, copy) NSNumber *mRound;
 @property (nonatomic, copy) NSNumber *seasonCode;
 @property (nonatomic, copy) BCTeam *homeTeam;
 @property (nonatomic, copy) BCTeam *visitorTeam;

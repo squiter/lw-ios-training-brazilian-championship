@@ -17,7 +17,7 @@
              @"visitorTeamScore": @"away_team_score",
              @"mDate": @"date",
              @"location": @"place",
-             @"round": @"round",
+             @"mRound": @"round",
              @"seasonCode": @"season_id",
              @"homeTeam": @"home_team",
              @"visitorTeam": @"away_team"
@@ -42,8 +42,7 @@
 - (NSString *)formattedDate {
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setFormatterBehavior:NSDateFormatterBehavior10_4];
-    [formatter setDateStyle:NSDateFormatterShortStyle];
-    [formatter setTimeStyle:NSDateFormatterShortStyle];
+    [formatter setDateFormat:@"dd/MM HH:mm"];
     
     return (NSString *) [formatter stringFromDate:self.mDate];
 }
