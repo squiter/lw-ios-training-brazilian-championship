@@ -67,9 +67,9 @@
     BCMatchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"matchCell" forIndexPath:indexPath];
     
     BCMatch *match = self.matches[indexPath.row];
-    
+        
     // Configure the cell...
-    cell.mDate.text = match.mDate;
+    cell.mDate.text = match.formattedDate;
     cell.location.text = match.location;
     cell.homeTeamName.text = match.homeTeam.name;
     cell.homeTeamScore.text = match.homeTeamScore.stringValue;

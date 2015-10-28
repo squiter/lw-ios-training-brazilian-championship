@@ -14,11 +14,13 @@
 @property (nonatomic, copy) NSNumber *code;
 @property (nonatomic, copy) NSNumber *homeTeamScore;
 @property (nonatomic, copy) NSNumber *visitorTeamScore;
-@property (nonatomic, copy) NSString *mDate;
+@property (nonatomic, copy) NSDate *mDate;
 @property (nonatomic, copy) NSString *location;
 @property (nonatomic, copy) NSNumber *round;
 @property (nonatomic, copy) NSNumber *seasonCode;
 @property (nonatomic, copy) BCTeam *homeTeam;
 @property (nonatomic, copy) BCTeam *visitorTeam;
+
+- (NSString *)formattedDate;
 
 @end
