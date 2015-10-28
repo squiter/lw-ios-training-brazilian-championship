@@ -25,7 +25,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.title = @"Times";
+    self.title = @"Clubes";
     
     [self loadTeams];
     [self.tableView reloadData];
@@ -71,6 +71,14 @@
     [teamCell.shield sd_setImageWithURL:(NSURL *)team.imageURL];
 
     return teamCell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"goToTeamDetail"]) {
+        BCTeamDetailViewController *detailVC = segue.destinationViewController;
+        BCTeam *team = self.teams[self.tableView.indexPathForSelectedRow.row];
+        detailVC.team = team;
+    }
 }
 
 

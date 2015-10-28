@@ -10,6 +10,7 @@
 #import "BCTeamTableViewCell.h"
 #import "BCAPIClient.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "BCTeamDetailViewController.h"
 
 @interface TeamsTableViewController : UITableViewController
 
