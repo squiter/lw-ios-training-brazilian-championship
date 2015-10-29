@@ -334,7 +334,7 @@
         <scene sceneID="wU4-hD-i8T">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rvh-HB-yKf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Clubes" id="Bv5-Fu-0Fc"/>
+                    <tabBarItem key="tabBarItem" title="Clubes" image="Beach Ball" id="Bv5-Fu-0Fc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yfg-AP-8xU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -353,7 +353,7 @@
         <scene sceneID="egH-06-SKa">
             <objects>
                 <navigationController title="Partidas" automaticallyAdjustsScrollViewInsets="NO" id="UJZ-Ju-ktg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Partidas" id="zGH-OQ-sw7"/>
+                    <tabBarItem key="tabBarItem" title="Partidas" image="Medal" id="zGH-OQ-sw7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SfO-iW-0Vj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -372,7 +372,7 @@
         <scene sceneID="zHp-2T-FqT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MHP-A7-Iks" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gridão" id="Jvl-lK-VqV"/>
+                    <tabBarItem key="tabBarItem" title="Gridão" image="Prison" id="Jvl-lK-VqV"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="GAO-Ji-MKf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -388,6 +388,11 @@
             <point key="canvasLocation" x="1177" y="-396"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Beach Ball" width="25" height="25"/>
+        <image name="Medal" width="25" height="25"/>
+        <image name="Prison" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="mSB-Ap-OZ5"/>
     </inferredMetricsTieBreakers>
