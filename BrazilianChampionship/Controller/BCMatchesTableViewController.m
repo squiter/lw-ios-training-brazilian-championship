@@ -104,6 +104,17 @@
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"O que vc quer?"
+                                                                             message:@"Quer ver onde é o role ou ser notificado do jogo?"
+                                                                      preferredStyle:UIAlertControllerStyleActionSheet];
+    UIAlertAction *goToLocation = [UIAlertAction actionWithTitle:@"Onde vai ser?" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *setNotification = [UIAlertAction actionWithTitle:@"Me avise!" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:goToLocation];
+    [alertController addAction:setNotification];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
