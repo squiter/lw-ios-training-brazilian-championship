@@ -25,6 +25,9 @@ static NSString * const reuseIdentifier = @"collectionTeamCell";
     // self.clearsSelectionOnViewWillAppear = NO;
         
     // Do any additional setup after loading the view.
+    
+    self.title = @"Brasões";
+    
     [self loadTeams];
     [self.collectionView reloadData];
 }
