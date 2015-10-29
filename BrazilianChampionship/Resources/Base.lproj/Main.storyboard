@@ -277,11 +277,11 @@
             </objects>
             <point key="canvasLocation" x="365" y="422"/>
         </scene>
-        <!--Item-->
+        <!--Clubes-->
         <scene sceneID="wU4-hD-i8T">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Rvh-HB-yKf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Bv5-Fu-0Fc"/>
+                    <tabBarItem key="tabBarItem" title="Clubes" id="Bv5-Fu-0Fc"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yfg-AP-8xU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -296,11 +296,11 @@
             </objects>
             <point key="canvasLocation" x="1177" y="422"/>
         </scene>
-        <!--Item-->
+        <!--Partidas-->
         <scene sceneID="egH-06-SKa">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UJZ-Ju-ktg" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="zGH-OQ-sw7"/>
+                <navigationController title="Partidas" automaticallyAdjustsScrollViewInsets="NO" id="UJZ-Ju-ktg" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Partidas" id="zGH-OQ-sw7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SfO-iW-0Vj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
