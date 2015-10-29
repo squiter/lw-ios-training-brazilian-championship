@@ -84,7 +84,8 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"goToTeamDetail"]) {
         BCTeamDetailViewController *detailVC = segue.destinationViewController;
-        BCTeam *team = self.teams[self.tableView.indexPathForSelectedRow.row];
+        NSArray *teams = self.searchController.isActive ? self.searchResults : self.teams;
+        BCTeam *team = teams[self.tableView.indexPathForSelectedRow.row];
         detailVC.team = team;
     }
 }
