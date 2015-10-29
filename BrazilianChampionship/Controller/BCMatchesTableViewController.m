@@ -109,9 +109,35 @@
                                                                              message:@"Quer ver onde é o role ou ser notificado do jogo?"
                                                                       preferredStyle:UIAlertControllerStyleActionSheet];
     UIAlertAction *goToLocation = [UIAlertAction actionWithTitle:@"Onde vai ser?" style:UIAlertActionStyleDefault handler:nil];
-    UIAlertAction *setNotification = [UIAlertAction actionWithTitle:@"Me avise!" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *setNotification = [UIAlertAction actionWithTitle:@"Me avise!" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        BCMatch *current = self.matches[indexPath.row];
+        if ([current.mDate compare:NSDate.date] == NSOrderedDescending) {
+            NSLog(@"match date > today");
+            [self setNotificationFor:current];
+        }else{
+            NSLog(@"match date < today");
+            [self matchPassedAway];
+        }
+    }];
     [alertController addAction:goToLocation];
     [alertController addAction:setNotification];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
+-(void)setNotificationFor:(BCMatch *)match {
+    UILocalNotification *localNotification = [[UILocalNotification alloc] init];
+    localNotification.fireDate = match.mDate;
+    localNotification.alertTitle = @"Começo de jogo";
+    localNotification.alertBody = [NSString stringWithFormat:@"O jogo %@ contra %@ já vai começar!", match.homeTeam.name, match.visitorTeam.name];
+    [[UIApplication sharedApplication] scheduleLocalNotification:localNotification];
+}
+
+-(void)matchPassedAway {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Aviso"
+                                                                             message:@"Essa partida já passou principe. :("
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okButton = [UIAlertAction actionWithTitle:@"Ok" style:UIAlertActionStyleDefault handler:nil];
+    [alertController addAction:okButton];
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
