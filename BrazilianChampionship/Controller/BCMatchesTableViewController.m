@@ -53,54 +53,34 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    NSInteger count = 0;
-    
-    for (NSUInteger i = 0; i < self.matches.count; i++) {
-        if (i == 0) {
-            count++;
-        }else{
-            NSUInteger j = i - 1;
-            BCMatch *current = self.matches[i];
-            BCMatch *previus = self.matches[j];
-            if (current.mRound != previus.mRound) {
-                count++;
-            }
-        }
-    }
-    return count;
+    return 38;
 }
 
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    // return all elements for this section
-//    NSMutableArray<BCMatch *> *matches_in_section;
-//
-//    for (BCMatch * m in self.matches) {
-//        if (m.mRound.integerValue == section) {
-//            [matches_in_section arrayByAddingObject:m];
-//        }
-//    }
-//    return matches_in_section.count;
-    return self.matches.count;
+
+    return 10;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return [NSString stringWithFormat:@"%d˚ Rodada", section + 1];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BCMatchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"matchCell" forIndexPath:indexPath];
     
-    BCMatch *match = self.matches[indexPath.row];
+    BCMatch *match = self.matches[indexPath.row + (10 * (indexPath.section + 1))];
     
-    //if (match.mRound.integerValue == indexPath.section) {
-        // Configure the cell...
-        cell.mDate.text = match.formattedDate;
-        cell.location.text = match.location;
-        cell.homeTeamName.text = match.homeTeam.name;
-        cell.homeTeamScore.text = match.homeTeamScore.stringValue;
-        [cell.homeTeamSheild sd_setImageWithURL:(NSURL *) match.homeTeam.imageURL];
-        cell.vistitorTeamName.text = match.visitorTeam.name;
-        cell.visitorTeamScore.text = match.visitorTeamScore.stringValue;
-        [cell.visitorTeamSheild sd_setImageWithURL:(NSURL *) match.visitorTeam.imageURL];
-    //}
-    //TODO: select the righ cell by indexPath.section
+    // Configure the cell...
+    cell.mDate.text = match.formattedDate;
+    cell.location.text = match.location;
+    cell.homeTeamName.text = match.homeTeam.name;
+    cell.homeTeamScore.text = match.homeTeamScore.stringValue;
+    [cell.homeTeamSheild sd_setImageWithURL:(NSURL *) match.homeTeam.imageURL];
+    cell.vistitorTeamName.text = match.visitorTeam.name;
+    cell.visitorTeamScore.text = match.visitorTeamScore.stringValue;
+    [cell.visitorTeamSheild sd_setImageWithURL:(NSURL *) match.visitorTeam.imageURL];
+
     return cell;
 }
 
