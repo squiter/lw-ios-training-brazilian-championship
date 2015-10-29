@@ -8,9 +8,11 @@
 
 #import "TeamsTableViewController.h"
 
-@interface TeamsTableViewController ()
+@interface TeamsTableViewController () <UISearchResultsUpdating>
 
 @property (nonatomic, strong) NSArray *teams;
+@property (nonatomic, strong) UISearchController *searchController;
+@property (nonatomic, strong) NSArray *searchResults;
 
 @end
 
@@ -26,8 +28,11 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.title = @"Clubes";
+    
+    self.searchResults = @[];
         
     [self loadTeams];
+    [self setupSearchController];
     [self.tableView reloadData];
 }
 
@@ -58,7 +63,7 @@
 //}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.teams.count;
+    return self.searchController.isActive ? self.searchResults.count : self.teams.count;
 }
 
 
@@ -66,13 +71,16 @@
     BCTeamTableViewCell *teamCell = [tableView dequeueReusableCellWithIdentifier:@"teamCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    BCTeam *team = self.teams[indexPath.row];
+    NSArray *teams = self.searchController.isActive ? self.searchResults : self.teams;
+    BCTeam *team = teams[indexPath.row];
+    
     teamCell.name.text = team.name;
     [teamCell.shield sd_setImageWithURL:(NSURL *)team.imageURL];
 
     return teamCell;
 }
 
+#pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"goToTeamDetail"]) {
         BCTeamDetailViewController *detailVC = segue.destinationViewController;
@@ -82,48 +90,34 @@
 }
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - Search
+- (void)setupSearchController {
+    self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+    [self.searchController.searchBar sizeToFit];
+    
+    self.searchController.searchResultsUpdater = self;
+    self.searchController.dimsBackgroundDuringPresentation = NO;
+    
+    self.tableView.tableHeaderView = self.searchController.searchBar;
+    self.definesPresentationContext = YES;
+    
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)searchTeamsForText:(NSString *)text {
+    self.searchResults = [self.teams bk_select:^BOOL(BCTeam *team) {
+        return [team.name rangeOfString:text options:NSCaseInsensitiveSearch].location != NSNotFound;
+    }];
+    [self.tableView reloadData];
+    
 }
-*/
 
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
+- (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+        // Set searchString equal to what's typed into the searchbar
+        NSString *searchString = self.searchController.searchBar.text;
+        
+        [self searchTeamsForText:searchString];
+    
+        [self.tableView reloadData];
 }
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
