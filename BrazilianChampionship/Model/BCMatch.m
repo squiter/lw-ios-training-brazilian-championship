@@ -24,6 +24,7 @@
              };
 }
 
+#pragma mark - JSONTransformers
 + (NSValueTransformer *)mDateJSONTransformer {
     return [MTLValueTransformer transformerUsingForwardBlock:^id(NSString *dateString, BOOL *success, NSError *__autoreleasing *error) {
         return [self.dateFormatter dateFromString:dateString];
@@ -32,6 +33,19 @@
     }];
 }
 
++ (NSValueTransformer *)homeTeamScoreJSONTransformer {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSNumber *scoreNumber, BOOL *success, NSError *__autoreleasing *error) {
+        return scoreNumber.integerValue == -1 ? nil : scoreNumber;
+    }];
+}
+
++ (NSValueTransformer *)visitorTeamScoreJSONTransformer {
+    return [MTLValueTransformer transformerUsingForwardBlock:^id(NSNumber *scoreNumber, BOOL *success, NSError *__autoreleasing *error) {
+        return scoreNumber.integerValue == -1 ? nil : scoreNumber;
+    }];
+}
+
+#pragma mark - Date stuffs
 + (NSDateFormatter *)dateFormatter {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
