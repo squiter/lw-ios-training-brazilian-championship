@@ -22,6 +22,8 @@
 		81C878561BE1380F00872478 /* BCMatchesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C878551BE1380F00872478 /* BCMatchesTableViewController.m */; };
 		81C878591BE138D400872478 /* BCMatchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C878581BE138D400872478 /* BCMatchTableViewCell.m */; };
 		81C8785C1BE13FD200872478 /* BCMatch.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C8785B1BE13FD200872478 /* BCMatch.m */; };
+		81C8785F1BE2493800872478 /* BCMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C8785E1BE2493800872478 /* BCMapViewController.m */; };
+		81C878611BE24A1900872478 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81C878601BE24A1900872478 /* MapKit.framework */; };
 		8CCDAE6AF89F974165387A66 /* libPods-BrazilianChampionship.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 581D5C0BF5AC60324BBDC402 /* libPods-BrazilianChampionship.a */; };
 /* End PBXBuildFile section */
 
@@ -75,6 +77,9 @@
 		81C878581BE138D400872478 /* BCMatchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMatchTableViewCell.m; sourceTree = "<group>"; };
 		81C8785A1BE13FD200872478 /* BCMatch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMatch.h; sourceTree = "<group>"; };
 		81C8785B1BE13FD200872478 /* BCMatch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMatch.m; sourceTree = "<group>"; };
+		81C8785D1BE2493800872478 /* BCMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMapViewController.h; sourceTree = "<group>"; };
+		81C8785E1BE2493800872478 /* BCMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCMapViewController.m; sourceTree = "<group>"; };
+		81C878601BE24A1900872478 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B825DA6E03E0996A76508D41 /* Pods-BrazilianChampionship.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrazilianChampionship.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BrazilianChampionship/Pods-BrazilianChampionship.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C878611BE24A1900872478 /* MapKit.framework in Frameworks */,
 				8CCDAE6AF89F974165387A66 /* libPods-BrazilianChampionship.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,6 +182,8 @@
 				81C878521BE1323A00872478 /* BCTeamDetailViewController.m */,
 				81C878541BE1380F00872478 /* BCMatchesTableViewController.h */,
 				81C878551BE1380F00872478 /* BCMatchesTableViewController.m */,
+				81C8785D1BE2493800872478 /* BCMapViewController.h */,
+				81C8785E1BE2493800872478 /* BCMapViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 		CEA6F4D1A628E60D4FA78676 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81C878601BE24A1900872478 /* MapKit.framework */,
 				581D5C0BF5AC60324BBDC402 /* libPods-BrazilianChampionship.a */,
 			);
 			name = Frameworks;
@@ -319,6 +328,11 @@
 					815C4A2A1BE102A100CBCF8E = {
 						CreatedOnToolsVersion = 7.1;
 						DevelopmentTeam = 2M74K22ZP7;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					815C4A431BE102A100CBCF8E = {
 						CreatedOnToolsVersion = 7.1;
@@ -432,6 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C8785F1BE2493800872478 /* BCMapViewController.m in Sources */,
 				81C8785C1BE13FD200872478 /* BCMatch.m in Sources */,
 				815C4A721BE102FE00CBCF8E /* AppDelegate.m in Sources */,
 				815C4A7B1BE1036100CBCF8E /* TeamsTableViewController.m in Sources */,

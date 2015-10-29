@@ -108,7 +108,9 @@
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"O que vc quer?"
                                                                              message:@"Quer ver onde é o role ou ser notificado do jogo?"
                                                                       preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *goToLocation = [UIAlertAction actionWithTitle:@"Onde vai ser?" style:UIAlertActionStyleDefault handler:nil];
+    UIAlertAction *goToLocation = [UIAlertAction actionWithTitle:@"Onde vai ser?" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self performSegueWithIdentifier:@"goToLocation" sender:nil];
+    }];
     UIAlertAction *setNotification = [UIAlertAction actionWithTitle:@"Me avise!" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         BCMatch *current = self.matches[indexPath.row];
         if ([current.mDate compare:NSDate.date] == NSOrderedDescending) {
