@@ -69,7 +69,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BCMatchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"matchCell" forIndexPath:indexPath];
     
-    BCMatch *match = self.matches[indexPath.row + (10 * (indexPath.section + 1))];
+    BCMatch *match = self.matches[indexPath.row + (10 * indexPath.section)];
     
     // Configure the cell...
     cell.mDate.text = match.formattedDate;
