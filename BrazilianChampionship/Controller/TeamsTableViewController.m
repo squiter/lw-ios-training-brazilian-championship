@@ -27,7 +27,7 @@
     
     self.title = @"Clubes";
     
-    [self.tabBarController.viewControllers makeObjectsPerformSelector:@selector(view)];
+    //[self.tabBarController.viewControllers makeObjectsPerformSelector:@selector(view)];
     
     [self loadTeams];
     [self.tableView reloadData];

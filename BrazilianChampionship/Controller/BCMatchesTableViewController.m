@@ -70,30 +70,36 @@
     return count;
 }
 
-/*
+
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // return all elements for this section
-}
-
- 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//    NSMutableArray<BCMatch *> *matches_in_section;
+//
+//    for (BCMatch * m in self.matches) {
+//        if (m.mRound.integerValue == section) {
+//            [matches_in_section arrayByAddingObject:m];
+//        }
+//    }
+//    return matches_in_section.count;
     return self.matches.count;
 }
-*/
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BCMatchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"matchCell" forIndexPath:indexPath];
     
     BCMatch *match = self.matches[indexPath.row];
     
-    // Configure the cell...
-    cell.mDate.text = match.formattedDate;
-    cell.location.text = match.location;
-    cell.homeTeamName.text = match.homeTeam.name;
-    cell.homeTeamScore.text = match.homeTeamScore.stringValue;
-    [cell.homeTeamSheild sd_setImageWithURL:(NSURL *) match.homeTeam.imageURL];
-    cell.vistitorTeamName.text = match.visitorTeam.name;
-    cell.visitorTeamScore.text = match.visitorTeamScore.stringValue;
-    [cell.visitorTeamSheild sd_setImageWithURL:(NSURL *) match.visitorTeam.imageURL];
+    //if (match.mRound.integerValue == indexPath.section) {
+        // Configure the cell...
+        cell.mDate.text = match.formattedDate;
+        cell.location.text = match.location;
+        cell.homeTeamName.text = match.homeTeam.name;
+        cell.homeTeamScore.text = match.homeTeamScore.stringValue;
+        [cell.homeTeamSheild sd_setImageWithURL:(NSURL *) match.homeTeam.imageURL];
+        cell.vistitorTeamName.text = match.visitorTeam.name;
+        cell.visitorTeamScore.text = match.visitorTeamScore.stringValue;
+        [cell.visitorTeamSheild sd_setImageWithURL:(NSURL *) match.visitorTeam.imageURL];
+    //}
     //TODO: select the righ cell by indexPath.section
     return cell;
 }
