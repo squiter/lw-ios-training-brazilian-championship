@@ -47,15 +47,16 @@ static NSString * const reuseIdentifier = @"collectionTeamCell";
         
     }];
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+#pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    if ([segue.identifier isEqualToString:@"goToTeamDetail"]) {
+        BCTeamDetailViewController *detailVC = segue.destinationViewController;
+        NSIndexPath *indexPath = [self.collectionView.indexPathsForSelectedItems firstObject];
+        BCTeam *team = self.teams[indexPath.item];
+        detailVC.team = team;
+    }
 }
-*/
 
 
 

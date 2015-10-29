@@ -12,6 +12,7 @@
 #import <BlocksKit/BlocksKit.h>
 #import "BCTeamCollectionViewCell.h"
 #import "BCTeamDetailViewController.h"
+#import "BCTeam.h"
 
 @interface BCTeamsCollectionViewController : UICollectionViewController
 
