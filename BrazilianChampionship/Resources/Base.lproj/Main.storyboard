@@ -108,6 +108,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="0VZ-PV-Pzs"/>
+                    <connections>
+                        <segue destination="InH-cc-ctc" kind="presentation" identifier="gameShark" id="ATx-mG-fuG"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rbz-ZZ-Liw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -329,6 +332,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wti-v8-9xj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="365" y="422"/>
+        </scene>
+        <!--Walkthrough-->
+        <scene sceneID="ytR-lq-KF8">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Walkthrough" id="InH-cc-ctc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="fgy-eZ-MMX"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kJt-AY-Rle" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2354.5" y="887"/>
         </scene>
         <!--Clubes-->
         <scene sceneID="wU4-hD-i8T">

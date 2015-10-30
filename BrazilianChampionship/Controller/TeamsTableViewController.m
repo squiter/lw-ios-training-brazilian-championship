@@ -47,7 +47,14 @@
         UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Walkthrough" bundle:nil];
         [self presentViewController:[sb instantiateInitialViewController] animated:YES completion:nil];
     }
-
+    
+    // attach long press gesture to collectionView
+    UILongPressGestureRecognizer *lpgr = [[UILongPressGestureRecognizer alloc]
+       initWithTarget:self action:@selector(handleLongPress:)];
+    lpgr.minimumPressDuration = .5; //seconds
+    lpgr.delaysTouchesBegan = YES;
+    lpgr.delegate = self;
+    [self.tableView addGestureRecognizer:lpgr];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -133,6 +140,12 @@
         [self searchTeamsForText:searchString];
     
         [self.tableView reloadData];
+}
+
+#pragma mark - GameShark
+
+-(void)handleLongPress:(UILongPressGestureRecognizer *)gestureRecognizer {
+    [self performSegueWithIdentifier:@"gameShark" sender:nil];
 }
 
 @end
