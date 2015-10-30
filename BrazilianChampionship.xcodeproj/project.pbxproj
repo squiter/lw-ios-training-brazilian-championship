@@ -18,6 +18,9 @@
 		815C4A7E1BE105D300CBCF8E /* BCTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A7D1BE105D300CBCF8E /* BCTeamTableViewCell.m */; };
 		815C4A851BE11FD300CBCF8E /* BCAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A841BE11FD300CBCF8E /* BCAPIClient.m */; };
 		815C4A881BE1212500CBCF8E /* BCTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 815C4A871BE1212500CBCF8E /* BCTeam.m */; };
+		81BA3B711BE3A49D00074702 /* Walkthrough.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81BA3B701BE3A49D00074702 /* Walkthrough.storyboard */; };
+		81BA3B771BE3A7D900074702 /* BCWalkthroughViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BA3B761BE3A7D900074702 /* BCWalkthroughViewController.m */; };
+		81BA3B7A1BE3AA1900074702 /* BCWalkthroughContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81BA3B791BE3AA1900074702 /* BCWalkthroughContentViewController.m */; };
 		81C878531BE1323A00872478 /* BCTeamDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C878521BE1323A00872478 /* BCTeamDetailViewController.m */; };
 		81C878561BE1380F00872478 /* BCMatchesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C878551BE1380F00872478 /* BCMatchesTableViewController.m */; };
 		81C878591BE138D400872478 /* BCMatchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C878581BE138D400872478 /* BCMatchTableViewCell.m */; };
@@ -71,6 +74,11 @@
 		815C4A841BE11FD300CBCF8E /* BCAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCAPIClient.m; sourceTree = "<group>"; };
 		815C4A861BE1212500CBCF8E /* BCTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTeam.h; sourceTree = "<group>"; };
 		815C4A871BE1212500CBCF8E /* BCTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTeam.m; sourceTree = "<group>"; };
+		81BA3B701BE3A49D00074702 /* Walkthrough.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Walkthrough.storyboard; sourceTree = "<group>"; };
+		81BA3B751BE3A7D900074702 /* BCWalkthroughViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCWalkthroughViewController.h; sourceTree = "<group>"; };
+		81BA3B761BE3A7D900074702 /* BCWalkthroughViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCWalkthroughViewController.m; sourceTree = "<group>"; };
+		81BA3B781BE3AA1900074702 /* BCWalkthroughContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCWalkthroughContentViewController.h; sourceTree = "<group>"; };
+		81BA3B791BE3AA1900074702 /* BCWalkthroughContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCWalkthroughContentViewController.m; sourceTree = "<group>"; };
 		81C878511BE1323A00872478 /* BCTeamDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCTeamDetailViewController.h; sourceTree = "<group>"; };
 		81C878521BE1323A00872478 /* BCTeamDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BCTeamDetailViewController.m; sourceTree = "<group>"; };
 		81C878541BE1380F00872478 /* BCMatchesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BCMatchesTableViewController.h; sourceTree = "<group>"; };
@@ -192,6 +200,10 @@
 				81C8785E1BE2493800872478 /* BCMapViewController.m */,
 				81C878621BE2860700872478 /* BCTeamsCollectionViewController.h */,
 				81C878631BE2860700872478 /* BCTeamsCollectionViewController.m */,
+				81BA3B751BE3A7D900074702 /* BCWalkthroughViewController.h */,
+				81BA3B761BE3A7D900074702 /* BCWalkthroughViewController.m */,
+				81BA3B781BE3AA1900074702 /* BCWalkthroughContentViewController.h */,
+				81BA3B791BE3AA1900074702 /* BCWalkthroughContentViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -213,6 +225,7 @@
 				815C4A691BE102FD00CBCF8E /* Assets.xcassets */,
 				815C4A6A1BE102FD00CBCF8E /* LaunchScreen.storyboard */,
 				815C4A6C1BE102FD00CBCF8E /* Main.storyboard */,
+				81BA3B701BE3A49D00074702 /* Walkthrough.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -382,6 +395,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				815C4A741BE102FE00CBCF8E /* Assets.xcassets in Resources */,
+				81BA3B711BE3A49D00074702 /* Walkthrough.storyboard in Resources */,
 				815C4A761BE102FE00CBCF8E /* Main.storyboard in Resources */,
 				815C4A751BE102FE00CBCF8E /* LaunchScreen.storyboard in Resources */,
 			);
@@ -459,6 +473,8 @@
 				81C8785F1BE2493800872478 /* BCMapViewController.m in Sources */,
 				81C8785C1BE13FD200872478 /* BCMatch.m in Sources */,
 				81C878641BE2860700872478 /* BCTeamsCollectionViewController.m in Sources */,
+				81BA3B7A1BE3AA1900074702 /* BCWalkthroughContentViewController.m in Sources */,
+				81BA3B771BE3A7D900074702 /* BCWalkthroughViewController.m in Sources */,
 				815C4A721BE102FE00CBCF8E /* AppDelegate.m in Sources */,
 				815C4A7B1BE1036100CBCF8E /* TeamsTableViewController.m in Sources */,
 				81C878561BE1380F00872478 /* BCMatchesTableViewController.m in Sources */,

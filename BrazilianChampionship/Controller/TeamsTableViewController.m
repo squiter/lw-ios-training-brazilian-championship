@@ -36,6 +36,20 @@
     [self.tableView reloadData];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    BOOL shouldDisplayWalkthrough = ![[defaults objectForKey:@"already_displayed_walkthrough"] boolValue];
+    
+    if (shouldDisplayWalkthrough) {
+        UIStoryboard *sb = [UIStoryboard storyboardWithName:@"Walkthrough" bundle:nil];
+        [self presentViewController:[sb instantiateInitialViewController] animated:YES completion:nil];
+    }
+
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
