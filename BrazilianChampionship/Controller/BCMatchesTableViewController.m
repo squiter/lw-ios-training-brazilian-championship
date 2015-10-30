@@ -73,10 +73,14 @@
     return titles;
 }
 
+- (NSInteger)getTeamIndexBy:(NSIndexPath *)indexPath {
+    return indexPath.row + (10 * indexPath.section);
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BCMatchTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"matchCell" forIndexPath:indexPath];
     
-    BCMatch *match = self.matches[indexPath.row + (10 * indexPath.section)];
+    BCMatch *match = self.matches[[self getTeamIndexBy:indexPath]];
     
     // Configure the cell...
     cell.mDate.text = match.formattedDate;
@@ -92,15 +96,18 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath  {
+    BCMatch *current = self.matches[[self getTeamIndexBy:indexPath]];
+    BOOL isAlreadyPassed = [current.mDate compare:NSDate.date] == NSOrderedDescending;
+    NSString *locationMessage = isAlreadyPassed ?  @"Onde vai ser?" : @"Onde foi?";
+    
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"O que vc quer?"
                                                                              message:@"Quer ver onde é o role ou ser notificado do jogo?"
                                                                       preferredStyle:UIAlertControllerStyleActionSheet];
-    UIAlertAction *goToLocation = [UIAlertAction actionWithTitle:@"Onde vai ser?" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+    UIAlertAction *goToLocation = [UIAlertAction actionWithTitle:locationMessage style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self performSegueWithIdentifier:@"goToLocation" sender:nil];
     }];
     UIAlertAction *setNotification = [UIAlertAction actionWithTitle:@"Me avise!" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-        BCMatch *current = self.matches[indexPath.row];
-        if ([current.mDate compare:NSDate.date] == NSOrderedDescending) {
+        if (isAlreadyPassed) {
             NSLog(@"match date > today");
             [self setNotificationFor:current];
         }else{
@@ -108,8 +115,10 @@
             [self matchPassedAway];
         }
     }];
+    UIAlertAction *cancelButton = [UIAlertAction actionWithTitle:@"Cancelar" style:UIAlertActionStyleCancel handler:nil];
     [alertController addAction:goToLocation];
     [alertController addAction:setNotification];
+    [alertController addAction:cancelButton];
     [self presentViewController:alertController animated:YES completion:nil];
 }
 
